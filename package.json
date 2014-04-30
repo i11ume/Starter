@@ -1,0 +1,14 @@
+{
+  "name": "neslegsparallax",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-clean":"*",
+    "grunt-text-replace":"*",
+    "grunt-contrib-cssmin":"*",
+  	"grunt-contrib-copy":"*",
+  	"grunt-processhtml":"*",
+  	"grunt-contrib-uglify":"*",
+    "grunt-contrib-rename":"*"
+  }
+}
