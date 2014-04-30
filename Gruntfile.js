@@ -29,6 +29,14 @@ module.exports = function(grunt) {
         //  }
         //},
 
+        less: {
+            build: {
+                files: {
+                    "build/css/main.css": "build/css/main.less"
+                }
+            }
+        },
+
         cssmin: {
             build: {
                 options: {
@@ -72,7 +80,7 @@ module.exports = function(grunt) {
     grunt.registerTask(
         'build',
         'Compiles all of the assets and copies the files to the build directory.', 
-        ['clean', 'copy', /* 'replace', */ 'cssmin', 'uglify', 'processhtml']
+        ['clean', 'copy', /* 'replace', */ 'less', 'cssmin', 'uglify', 'processhtml']
     );
 
     grunt.loadNpmTasks('grunt-text-replace');
@@ -81,5 +89,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
 };
